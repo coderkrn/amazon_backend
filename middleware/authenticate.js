@@ -1,6 +1,6 @@
 const jwt = require('jsonwebtoken')
 const USER = require('../models/usersSchema')
-const secKey = process.env.KEY;
+const secKey = 'iamkaranpalfullstackwebdeveloper';
 
 const authenticate = async(req, res, next)=>{
     try {
