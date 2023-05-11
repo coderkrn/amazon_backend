@@ -18,6 +18,10 @@ app.use(cookieParser(''))
 
 app.use(router);
 
+app.get('/', (req, res)=>{
+   res.send("<h1>Hello world</h1>")
+})
+
 const port = 8005;
 
 app.listen(port, ()=>{
