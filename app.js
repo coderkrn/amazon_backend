@@ -10,10 +10,11 @@ const cookieParser = require('cookie-parser')
 
 
 const DefaultData = require('./defaultData')
+const port = 8005;
 
-app.use(cors(
-   { origin: "*"}
-))
+
+app.use(cors())
+
 // app.use(function(req,res,next){
 //     res.header("Access-Control-Allow-Origin", "*")
 //     req.header(
@@ -36,7 +37,6 @@ app.get('/', (req, res)=>{
    res.send("<h1>Hello world</h1>")
 })
 
-const port = 8005;
 
 app.listen(port, ()=>{
     console.log(`Server is running on port ${port}`)
