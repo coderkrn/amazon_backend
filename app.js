@@ -10,7 +10,7 @@ const cookieParser = require('cookie-parser')
 
 
 const DefaultData = require('./defaultData')
-const port = process.env.PORT || 8005;
+const port =  8005;
 
 
 app.use(cors())

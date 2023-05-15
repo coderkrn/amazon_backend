@@ -78,6 +78,7 @@ router.post('/login', async (req, res) => {
         // console.log(userLogin)
         if (userLogin) {
             const isMatch = await bcrypt.compare(password, userLogin.password)
+
             // console.log(isMatch)
             // Token genrate
             const token = await userLogin.genrateAuthToken();
@@ -88,7 +89,7 @@ router.post('/login', async (req, res) => {
                 expires: new Date(Date.now() + 3600000),
                 httpOnly: true
             })
-
+              console.log("Password matched")
             if (!isMatch) {
                 res.status(400).json({ error: "Invalid details" })
                 console.log("Password dosen't match")
