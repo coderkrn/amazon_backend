@@ -19,7 +19,6 @@ const userSchema = new mongoose.Schema({
                 throw new Error('not valid email address')
             }
         }
-
     },
     mobile: {
         type: String,

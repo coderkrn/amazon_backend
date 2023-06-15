@@ -10,9 +10,9 @@ const cookieParser = require('cookie-parser')
 
 
 const DefaultData = require('./defaultData')
-app.use(cors())
 
 const port = 8005;
+app.use(cors())
 
 
 app.use(express.json())
