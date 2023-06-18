@@ -12,7 +12,7 @@ const cookieParser = require('cookie-parser')
 const DefaultData = require('./defaultData')
 
 const port = 8005;
-app.use(cors())
+app.use(cors({credentials: true, origin: 'https://amazonbackend-zeta.vercel.app'}))
 
 
 app.use(express.json())
